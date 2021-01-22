@@ -1,0 +1,192 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flex Demo</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+</head>
+	<style>
+
+	div {
+		border: 1px black;
+		
+		}
+		
+		body {
+			margin: 0;
+			//background-color: #f6f7fa;
+			background-color: black;
+			}
+		
+		
+		
+		#header h1 {
+			text-align: center;
+			font-size: 30px;
+			font-family: 'Dancing Script', cursive;
+			//color: black;
+			color: white;
+			
+			
+		}
+		#wrapper {
+			position: relative;
+	    	width: 100%;
+			padding:7px;
+			box-sizing:border-box;
+		}
+		
+		.menu {
+		text-align: center;
+		font-family: 'Poppins', sans-serif;
+			background-color: white;
+			height: 50px;
+		padding-top: 5px;
+			
+			
+	}
+	.menu ul li {
+		//text-align: right;
+		
+
+	}
+	.menu ul li a {
+		text-decoration: none;
+		color: black;
+		font-size: 17px;
+		padding: 5px 20px;
+		}
+		.menu a:hover {
+    background-color: dimgrey;
+   }
+		h2 {
+			text-align: center;
+			
+		}
+		.main {
+			top: 50%;
+			left: 50%;
+			//width: 750px;
+			padding: 20px;
+			//box-sizing: border-box;
+			background: #fff;
+			color: black;
+			border-radius: 2px;
+			display: flex;
+		}
+		.main .imgBx {
+			width: 150px;
+			flex: 0 0 250px;
+		}
+		.main .imgBx img {
+			max-width: 100%; 
+		}
+			
+		.main .content {
+			padding-left: 20px;
+			font-family: 'Poppins', sans-serif;
+			}
+		
+		.fa {
+       padding: 10px 0px -5px ;
+      /*font-size: 5px;*/
+       width: 16.72px;
+      text-align: center;
+       text-decoration: none;
+		height: 18px; 
+			}
+	/* Facebook */
+    .fa-facebook {
+    background: #3B5998;
+    color: white;
+ 	float: right;
+		margin: 20px;
+		}
+    /* Twitter */
+     .fa-twitter {
+      background: #55ACEE;
+      color: white;
+	float: right;
+		 margin: 20px;
+		 
+}
+		/* instagram */
+		.fa-instagram {
+			background: #F08080 ;
+			color: white;
+			float: right;
+			margin: 20px;
+			
+		}
+		
+		.footer {
+			color: white;
+			padding: 20px;
+			bottom: -500px;
+			height: 30px;
+			
+			
+		}	
+			
+		
+		/*------------------mobile--------------------*/
+	
+		@media (max-width: 800px){
+			#main {
+				display:block;
+			}
+		}
+	/*------------------desktop--------------------*/
+     @media (min-width: 801px){
+	   #wrapper {
+		 width: 75%;
+		 margin: 0 auto;
+	}
+	
+}
+		</style>
+
+<body>
+	
+	<div id="wrapper">
+	<div id="header">
+		<h1>Lensking</h1>
+		
+		
+			<div class="menu">
+			  <ul>
+				  <li><a href="index.html">Home</a>|<a href="page2n.html">Gallery</a>|<a href="page5.html">Design</a>|<a href="page3.html">About</a>|<a href="page4.html">Contact</a> 
+					  </li>
+				  </ul>
+		</div> 
+		</div>
+		<div class="main">
+			<div class="imgBx">
+				<img src="image1.jpg" height="400"alt="#">
+			</div>
+			<div class="content">
+				<h2>I'm here to capture your moments</h2>
+				  
+			       <p> My name is Afolayan Opeyemi,i am from Nigeria,i grew up in a little town called Ilorin,with my mom and sibings,where i attended pre school, high school and university, i am the last child of a family of 4.I have a bacholars degree in English language from the University of Ilorin.</p>
+				    <p> I decided to enroll in the media communication program at Humber college because i have a passion for web design and graphic design.I knew i had to take a photography class but i didnt read much into it, i just thought i just had to pass it to create my main focus was on web design but after my first 3 classes of photography, i grew to love it. I absolutely love shooting and trying new camera settings, this is why my portfolio assignment is based solely on my photography work. </p> 
+				
+			</div>
+			
+		
+		</div>
+		
+		
+		
+		<div class="footer">&copy;2020 Opeyemi Afolayan
+		<a href="#" class="fa fa-facebook"></a>
+<a href="https://twitter.com/home" class="fa fa-twitter"></a>
+		<a href="https://www.instagram.com/__opeyemi__/?hl=en" class="fa fa-instagram"></a>
+		</div>
+	</div>
+	
+</body>
+</html>

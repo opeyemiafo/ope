@@ -1,0 +1,180 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Flex Demo</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Quicksand&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<style>
+		div {
+		border:1px solid black;
+			
+		}
+		
+		body {
+			margin: 0;
+			background-color: black;
+			//background-color: #f6f7fa;
+			
+		}
+		#header h1 {
+			text-align: left;
+			font-size: 30px;
+			font-family: 'Dancing Script', cursive;
+			color: white;
+			
+			
+		}
+		#wrapper {
+			position: relative;
+	    	width: 100%;
+			padding:7px;
+			box-sizing:border-box;
+		}
+		
+		.text {
+			color: white;
+			text-align: center;
+			font-size: 15px;
+			font-family:'Poppins', sans-serif; 
+			margin: 0px 0px 20px;
+			 
+			
+		}
+		.menu {
+		text-align: center;
+		font-family: 'Poppins', sans-serif;
+			background-color: white;
+			
+	}
+	.menu ul li {
+		//text-align: right;
+		
+
+	}
+	.menu ul li a {
+		text-decoration: none;
+		color: black;
+		font-size: 17px;
+		padding: 5px 20px;
+		}
+		.menu a:hover {
+    background-color: dimgrey;
+			
+   }
+         .img-area {
+			display: flex;
+			flex-wrap: wrap;
+			flex-direction: row;
+			align-items: center;
+			justify-content: center;
+			 }
+		.single-img{
+			padding: 0 20px 20px;
+			
+		}
+		img:hover {
+			opacity: .4;
+			transition: .9s;
+		}
+		
+		.fa {
+       padding: 10px 0px -5px ;
+      /*font-size: 5px;*/
+       width: 16.72px;
+      text-align: center;
+       text-decoration: none;
+		height: 18px; 
+			}
+	/* Facebook */
+    .fa-facebook {
+    background: #3B5998;
+    color: white;
+ 	float: right;
+		margin: 20px;
+		}
+    /* Twitter */
+     .fa-twitter {
+      background: #55ACEE;
+      color: white;
+	float: right;
+		 margin: 20px;
+		 
+}
+		/* instagram */
+		.fa-instagram {
+			background: #F08080 ;
+			color: white;
+			float: right;
+			margin: 20px;
+			
+		}
+		.footer {
+			color: white;
+			padding: 20px;
+			bottom: -500px;
+			height: 30px;
+			
+			
+		}
+		
+		/*------------------mobile--------------------*/
+	
+		@media (max-width: 800px){
+			#main {
+				display:block;
+			}
+		}
+	/*------------------desktop--------------------*/
+     @media (min-width: 801px){
+	   #wrapper {
+		 width: 75%;
+		 margin: 0 auto;
+	}
+	
+}
+    </style>
+</head>
+	
+
+<body>
+	<div id="wrapper">
+	<div id="header">
+		<h1>Lensking</h1>
+		
+		
+			<div class="menu">
+			  <ul>
+				  <li><a href="index.html">Home</a>|<a href="page2n.html">Gallery</a>| <a href="page5.html">Design</a>|<a href="page3.html">About</a>|<a href="page4.html">Contact</a> 
+					  </li>
+				  </ul>
+		</div> 
+		</div>
+		
+		<div id="main">
+		<div class="text">
+			<p>WELCOME! I'M OPEYEMI</p>
+			<p> I'm a photography student specializing in people & portrait photography, based in Canada. Photography is my passion and I love to turn ideas into beautiful things. Looking for a caring, fun, passionate and creative photographer? It's me!
+		 </p>
+		</div>
+			
+		<div class="img-area">
+			<div class="single-img"><img src="image1.jpg" alt=""></div>
+			<div class="single-img"><img src="image2.jpg" alt=""></div>
+		  </div>
+	
+		</div>
+	<div class="footer">&copy;2020 Opeyemi Afolayan
+		<a href="#" class="fa fa-facebook"></a>
+<a href="https://twitter.com/home" class="fa fa-twitter"></a>
+		<a href="https://www.instagram.com/__opeyemi__/?hl=en" class="fa fa-instagram"></a>
+		</div>
+		
+		</div>	
+	
+	
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Flex Demo</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+	</head>
+	
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+<script type="text/javascript">
+
+/*** 
+    Simple jQuery Slideshow Script
+    Released by Jon Raasch (jonraasch.com) under FreeBSD license: free to use or modify, not responsible for anything, etc.  Please link out to me if you like it :)
+***/
+
+function slideSwitch() {
+    var $active = $('#slideshow IMG.active');
+
+    if ( $active.length == 0 ) $active = $('#slideshow IMG:last');
+
+    // use this to pull the images in the order they appear in the markup
+    var $next =  $active.next().length ? $active.next()
+        : $('#slideshow IMG:first');
+
+    // uncomment the 3 lines below to pull the images in random order
+    
+    // var $sibs  = $active.siblings();
+    // var rndNum = Math.floor(Math.random() * $sibs.length );
+    // var $next  = $( $sibs[ rndNum ] );
+
+
+    $active.addClass('last-active');
+
+    $next.css({opacity: 0.0})
+        .addClass('active')
+        .animate({opacity: 1.0}, 1000, function() {
+            $active.removeClass('active last-active');
+        });
+}
+
+$(function() {
+    setInterval( "slideSwitch()", 3000 );
+});
+
+</script>
+
+	<style>
+		div {
+		//border:1px solid black;
+			
+		}
+		
+		body {
+			background-repeat:no-repeat;
+			background-attachment: fixed;
+			background-size: cover;
+			background-color:black;
+			
+		}
+		#wrapper {
+			position: relative;
+	    	width: 100%;
+			padding:7px;
+			box-sizing:border-box;
+		}
+		
+		#header h1 {
+			text-align: center;
+			font-size: 30px;
+			font-family: 'Dancing Script', cursive;
+			color: white;
+			
+			
+		}
+		.menu {
+		text-align: center;
+		font-family: 'Poppins', sans-serif;
+			background-color: white;
+			height: 50px;
+		padding-top: 5px;
+			
+	}
+	.menu ul li {
+		//text-align: right;
+		
+
+	}
+	.menu ul li a {
+		text-decoration: none;
+		color: black;
+		font-size: 17px;
+		padding: 5px 20px;
+		}
+		.menu a:hover {
+    background-color: dimgrey;
+			
+   }
+		#main {
+			//background-color: white;
+		}
+			
+			
+		
+		
+		#content {
+			//width:300px;
+			float: right;
+			padding-left:5px;
+			padding-top: 30px;
+			font-family: 'Poppins', sans-serif;
+			font-size: 15px;
+			//color: black;
+			color: white;
+			}
+		
+		#gallery {
+			width:330px;
+			float: left;
+			
+			
+		}
+		
+		
+		/*end menu*/
+		/*slideshow*/
+		
+		#slideshow {
+    position:relative;
+    height:275px;
+}
+		
+#slideshow IMG {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+    opacity:0.0;
+}
+
+#slideshow IMG.active {
+    z-index:10;
+    opacity:1.0;
+}
+
+#slideshow IMG.last-active {
+    z-index:9;
+}
+		
+			.fa {
+       padding: 10px 0px -5px ;
+      /*font-size: 5px;*/
+       width: 16.72px;
+      text-align: center;
+       text-decoration: none;
+		height: 18px; 
+			}
+	/* Facebook */
+    .fa-facebook {
+    background: #3B5998;
+    color: white;
+ 	float: right;
+		margin: 20px;
+		}
+    /* Twitter */
+     .fa-twitter {
+      background: #55ACEE;
+      color: white;
+	float: right;
+		 margin: 20px;
+		 
+}
+		/* instagram */
+		.fa-instagram {
+			background: #F08080 ;
+			color: white;
+			float: right;
+			margin: 20px;
+			
+		}
+		
+		.footer {
+			color: white;
+			padding: 20px;
+			bottom: -500px;
+			height: 30px;
+			
+			
+		}	
+			
+		
+		/*------------------mobile--------------------*/
+	
+		@media (max-width: 800px){
+			#main {
+				display:block;
+			}
+		}
+	/*------------------desktop--------------------*/
+     @media (min-width: 801px){
+	   #wrapper {
+		 width: 75%;
+		 margin: 0 auto;
+	}
+	
+}
+
+	</style>	
+
+
+<body>
+<div id="wrapper">
+		<div id="header">
+		<h1>Lensking</h1>
+	                   
+	    
+  		<div class="menu">
+			  <ul>
+				  <li><a href="index.html">Home</a>|<a href="page2n.html">Gallery</a>|<a href="page5.html">Design</a>|<a href="page3.html">About</a>|<a href="page4.html">Contact</a> 
+					  </li>
+				  </ul>
+		</div> 
+	</div>
+	
+      <div id="main">
+  		 <div id="content">
+			 <p> This page is a slide show of my designs, these are the various projects i have worked on so far in my one year at Humber college. I hope to improve on my graphic designs in my second year of college, because advertising and creating graphic designs for brands is something i would love to do.</p>
+			 
+			
+		  </div>
+         <div id="gallery">
+		  <div id="slideshow">
+    <img src="design2.jpg" alt="Slideshow Image" class="active" />
+    <img src="design3.jpg" alt="Slideshow Image 2" />
+    <img src="design1.jpg" alt="Slideshow Image 3"/>
+   
+			  
+    
+</div>
+		  
+		  </div>
+		  <br clear="all">
+		  
+       
+	
+  </div>
+	
+	<div class="footer">&copy;2020 Opeyemi Afolayan
+		<a href="#" class="fa fa-facebook"></a>
+<a href="https://twitter.com/home" class="fa fa-twitter"></a>
+		<a href="https://www.instagram.com/__opeyemi__/?hl=en" class="fa fa-instagram"></a>
+		</div>
+	</div>
+</body>
+
+
+</html>
